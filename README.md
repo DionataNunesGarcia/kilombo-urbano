@@ -60,22 +60,25 @@ Here are some useful DDEV commands to help with your development workflow:
 
 ## Authors
 
+- [Ângelo Fumagalli](https://github.com/Fumagalli)
 - [Dionata Garcia](https://github.com/DionataNunesGarcia)
+- [Henrique Ferreira](https://github.com/hicksf)
 - [William Ulguim](https://github.com/Ulguim)
 
 
 
-[Drupal.org]: https://www.drupal.org
-[Drupal community]: https://www.drupal.org/community
-[GitLab repository]: https://git.drupalcode.org/project/drupal
-[issue queue]: https://www.drupal.org/project/issues/drupal
-[issue forks]: https://www.drupal.org/drupalorg/docs/gitlab-integration/issue-forks-merge-requests
-[documentation]: https://www.drupal.org/documentation
-[changelog]: https://www.drupal.org/list-changes/drupal
-[modules]: https://www.drupal.org/project/project_module
-[security advisories]: https://www.drupal.org/security
-[security RSS]: https://www.drupal.org/security/rss.xml
-[security team]: https://www.drupal.org/drupal-security-team
-[service providers]: https://www.drupal.org/drupal-services
-[support]: https://www.drupal.org/support
-[trademark]: https://www.drupal.com/trademark
+## Drupal Documentation
+- [Drupalorg](https://www.drupal.org)
+- [Drupal community](https://www.drupal.org/community)
+- [GitLab repository](https://git.drupalcode.org/project/drupal)
+- [issue queue](https://www.drupal.org/project/issues/drupal)
+- [issue forks](https://www.drupal.org/drupalorg/docs/gitlab-integration/issue-forks-merge-requests)
+- [documentation](https://www.drupal.org/documentation)
+- [changelog](https://www.drupal.org/list-changes/drupal)
+- [modules](https://www.drupal.org/project/project_module)
+- [security advisories](https://www.drupal.org/security)
+- [security RSS](https://www.drupal.org/security/rss.xml)
+- [security team](https://www.drupal.org/drupal-security-team)
+- [service providers](https://www.drupal.org/drupal-services)
+- [support](https://www.drupal.org/support)
+- [trademark](https://www.drupal.com/trademark)
