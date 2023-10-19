@@ -1,0 +1,31 @@
+uuid: f70077df-0bc0-4f13-9055-78a5d2d672c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sliders
+    - node.type.home_page
+    - paragraphs.paragraphs_type.sliders
+  module:
+    - entity_reference_revisions
+id: node.home_page.field_sliders
+field_name: field_sliders
+entity_type: node
+bundle: home_page
+label: Sliders
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      sliders: sliders
+    negate: 0
+    target_bundles_drag_drop:
+      sliders:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

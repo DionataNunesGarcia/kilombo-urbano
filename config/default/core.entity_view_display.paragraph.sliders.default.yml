@@ -1,0 +1,43 @@
+uuid: bcc28a88-3346-4558-b2a9-09ef8b0c3955
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sliders.field_alt_title
+    - field.field.paragraph.sliders.field_description
+    - field.field.paragraph.sliders.field_slide
+    - paragraphs.paragraphs_type.sliders
+  module:
+    - image
+id: paragraph.sliders.default
+targetEntityType: paragraph
+bundle: sliders
+mode: default
+content:
+  field_alt_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_slide:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }
