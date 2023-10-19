@@ -1,0 +1,22 @@
+uuid: b95c7e5b-d9c2-4ac3-aecc-0650e11cce6b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - yg_charity
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: yg_charity_powered
+theme: yg_charity
+region: navigation
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: cd671721-7897-4874-b288-5f1457750bcc
+langcode: en
+status: true
+dependencies:
+  theme:
+    - yg_charity
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: yg_charity_page_title
+theme: yg_charity
+region: navigation
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

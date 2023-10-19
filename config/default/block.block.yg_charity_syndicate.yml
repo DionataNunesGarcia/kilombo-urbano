@@ -1,0 +1,23 @@
+uuid: ecd2057a-c540-40a8-9eb3-a82c638ee8e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - yg_charity
+_core:
+  default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
+id: yg_charity_syndicate
+theme: yg_charity
+region: navigation
+weight: 0
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'RSS feed'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }
