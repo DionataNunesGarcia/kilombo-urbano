@@ -1,0 +1,23 @@
+uuid: 6abd217e-634b-40d4-8e7e-dab0db412fb3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - pachu
+_core:
+  default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
+id: pachu_syndicate
+theme: pachu
+region: top_header
+weight: 0
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'RSS feed'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }

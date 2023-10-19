@@ -1,0 +1,20 @@
+uuid: c64a68b8-3bc1-4859-9cec-24a35b99cbd3
+langcode: en
+status: false
+dependencies:
+  theme:
+    - kilombo_theme
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: kilombo_theme_page_title
+theme: kilombo_theme
+region: header
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

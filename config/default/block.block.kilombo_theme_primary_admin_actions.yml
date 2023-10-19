@@ -1,0 +1,20 @@
+uuid: 57d5d7d3-a3d4-4c30-9256-3b8a72963171
+langcode: en
+status: false
+dependencies:
+  theme:
+    - kilombo_theme
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: kilombo_theme_primary_admin_actions
+theme: kilombo_theme
+region: header
+weight: 1
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

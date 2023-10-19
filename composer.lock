@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "71946b8cdbb99fa2964cc763ab2fac7d",
+    "content-hash": "2db13cf3109f14643f079eae3b60e55f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1669,6 +1669,58 @@
             "homepage": "https://www.drupal.org/project/entity_reference_revisions",
             "support": {
                 "source": "https://git.drupalcode.org/project/entity_reference_revisions"
+            }
+        },
+        {
+            "name": "drupal/pachu",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/pachu.git",
+                "reference": "1.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/pachu-1.0.1.zip",
+                "reference": "1.0.1",
+                "shasum": "268f9ddc3f59de2d2604ae62f5f141a7c83d6136"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.1",
+                    "datestamp": "1685174186",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "diwan_saich",
+                    "homepage": "https://www.drupal.org/user/1549894"
+                },
+                {
+                    "name": "Kumar Rakesh",
+                    "homepage": "https://www.drupal.org/user/3680541"
+                },
+                {
+                    "name": "ptiwebtech",
+                    "homepage": "https://www.drupal.org/user/1603396"
+                }
+            ],
+            "description": "This is a Pachu sub theme of claro",
+            "homepage": "https://www.drupal.org/project/pachu",
+            "support": {
+                "source": "https://git.drupalcode.org/project/pachu"
             }
         },
         {

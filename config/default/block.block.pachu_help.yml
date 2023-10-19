@@ -1,0 +1,22 @@
+uuid: 22bbc789-683d-46aa-8548-8daade05c25f
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - pachu
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: pachu_help
+theme: pachu
+region: top_header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: c91e70eb-c067-4b71-a13e-1f68592adccf
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pachu
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: pachu_site_branding
+theme: pachu
+region: top_header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

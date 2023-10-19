@@ -1,0 +1,22 @@
+uuid: fefdeac9-7203-4bca-ae99-6ae65016845d
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - kilombo_theme
+_core:
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
+id: kilombo_theme_messages
+theme: kilombo_theme
+region: header
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

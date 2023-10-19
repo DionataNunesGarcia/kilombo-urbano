@@ -1,0 +1,103 @@
+<!-- HEADER SECTION-->
+{% include "@kilombo_theme/menu/header.html.twig" %}
+<!-- END HEADER SECTION -->
+<div class="clearfix"></div>
+{% if page.slider %}
+  {{ page.slider }}
+{% else %}
+  <div class="slider_banner" style="background-image: url({{ path_to_theme }}/images/banner-home-1024x373-1.png);">
+    <div class="container">
+      <div class="slider_content">
+        <h1>Helps People<br>Life and their<br>formation</h1>
+        <div class="slider_content_btn">
+          <a href="#" class="btn_check_causes">check our causes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+{% if page.featured %}
+  {{ page.featured }}
+{% else %}
+  <div class="middle-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="middle-content-text">
+            <i class="fa fa-heart"></i>
+            <h3>donate heart</h3>
+            <h2>6580</h2>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="middle-content-text">
+            <i class="fa fa-group"></i>
+            <h3>Save life</h3>
+            <h2>252</h2>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="middle-content-text">
+            <i class="fa fa-home"></i>
+            <h3>Donate House</h3>
+            <h2>2521</h2>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="middle-content-text">
+            <i class="fa fa-money"></i>
+            <h3>Donate Money</h3>
+            <h2>25.2K</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+{% if page.block_h %}
+  <div class="our-causes">
+    <div class="container">
+      <div class="row">
+        <div class="our-causes-top">
+          {{ page.block_h }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% else %}
+  <div class="our-causes">
+    <div class="container">
+      <div class="row">
+        <div class="our-causes-top">
+          <h2>Our Causes</h2>
+          <p>Pachu is a nonprofit. Our community is free to join, and we don’t charge an application or subscription fee. Instead, we retain a 5–10% nonprofit support fee on donations, plus 2% transaction processing fee. But we’re committed to raising even more money for your organization than we retain in fees.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+<div class="clearfix"></div>
+<section id="main-wrapper-front" class="pt-3 pb-3 clearfix">
+
+  {% if page.content  %}
+    <div id="main" class="row clearfix">
+      <div id="content" class="col-12 col-md-12 col-sm-12" role="main">
+        <a id="main-content" tabindex="-1"></a>
+        {{ page.content }}
+      </div>
+      <div class="clearfix"></div>
+      {% if page.sidebar %}
+        <section id="sidebar" class="col-12 col-md-4 col-sm-12 ">
+          <div class="sidebar">
+            {{ page.sidebar }}
+          </div>
+        </section>
+      {% endif %}
+    </div>
+  {% endif %}
+
+</section>
+<div class="clearfix"></div>
+<!-- FOOTER SECTION-->
+{% include "@pachu/system/footer.html.twig" %}
+<!-- END FOOTER SECTION -->

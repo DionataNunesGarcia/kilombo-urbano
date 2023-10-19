@@ -1,0 +1,22 @@
+uuid: 0cb76554-0396-40a4-803f-1f51d8e78ec5
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - kilombo_theme
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: kilombo_theme_powered
+theme: kilombo_theme
+region: header
+weight: 5
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

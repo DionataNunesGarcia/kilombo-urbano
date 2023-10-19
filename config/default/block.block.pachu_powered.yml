@@ -1,0 +1,22 @@
+uuid: 58b7d529-4fd4-4bc3-8b3d-2a83127dc28f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pachu
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: pachu_powered
+theme: pachu
+region: top_header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

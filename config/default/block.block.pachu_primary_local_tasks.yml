@@ -1,0 +1,22 @@
+uuid: 1d41991a-ebbb-4e34-824c-c4240530a26d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - pachu
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: pachu_primary_local_tasks
+theme: pachu
+region: top_header
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }
