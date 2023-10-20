@@ -1,21 +1,19 @@
-uuid: c09defd4-3899-4bb7-b6bd-d6e7153711a4
+uuid: 599aa75c-5f87-469f-86f2-7617c8a705b3
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.articles.body
-    - field.field.node.articles.field_attachment
-    - field.field.node.articles.field_image
-    - field.field.node.articles.field_tags
-    - node.type.articles
+    - field.field.node.blogs.body
+    - field.field.node.blogs.field_image
+    - field.field.node.blogs.field_tags
+    - node.type.blogs
   module:
-    - file
     - image
     - text
     - user
-id: node.articles.default
+id: node.blogs.default
 targetEntityType: node
-bundle: articles
+bundle: blogs
 mode: default
 content:
   body:
@@ -24,14 +22,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
-    region: content
-  field_attachment:
-    type: file_default
-    label: above
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-    weight: 103
     region: content
   field_image:
     type: image
@@ -50,7 +40,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 104
+    weight: 103
     region: content
   links:
     settings: {  }

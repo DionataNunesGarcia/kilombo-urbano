@@ -1,22 +1,20 @@
-uuid: a85d4365-ccee-4c37-a732-2af2ccda8ffd
+uuid: 1951b187-9807-4033-9fdb-07c8cf45c1ee
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.articles.body
-    - field.field.node.articles.field_attachment
-    - field.field.node.articles.field_image
-    - field.field.node.articles.field_tags
+    - field.field.node.blogs.body
+    - field.field.node.blogs.field_image
+    - field.field.node.blogs.field_tags
     - image.style.thumbnail
-    - node.type.articles
+    - node.type.blogs
   module:
-    - file
     - image
     - path
     - text
-id: node.articles.default
+id: node.blogs.default
 targetEntityType: node
-bundle: articles
+bundle: blogs
 mode: default
 content:
   body:
@@ -35,13 +33,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_attachment:
-    type: file_generic
-    weight: 123
-    region: content
-    settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
   field_image:
     type: image_image
     weight: 122
@@ -52,7 +43,7 @@ content:
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags
-    weight: 124
+    weight: 123
     region: content
     settings:
       match_operator: CONTAINS
