@@ -1,4 +1,4 @@
-uuid: 70e3a57b-c99c-4857-96d5-8c65c3f2b07b
+uuid: 8a4a7ea7-5120-4e23-a369-4a885cf806c0
 langcode: en
 status: true
 dependencies:
@@ -9,9 +9,9 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: 'Home Page'
-type: home_page
-description: 'Home Page project'
+name: Causes
+type: causes
+description: 'Use to register the causes for which the institution provides services.'
 help: ''
 new_revision: true
 preview_mode: 1

@@ -4,12 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.sliders.field_alt_title
-    - field.field.paragraph.sliders.field_description
+    - field.field.paragraph.sliders.field_link
     - field.field.paragraph.sliders.field_slide
     - image.style.thumbnail
     - paragraphs.paragraphs_type.sliders
   module:
     - image
+    - link
 id: paragraph.sliders.default
 targetEntityType: paragraph
 bundle: sliders
@@ -23,13 +24,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_description:
-    type: string_textarea
-    weight: 1
+  field_link:
+    type: link_default
+    weight: 3
     region: content
     settings:
-      rows: 5
-      placeholder: ''
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_slide:
     type: image_image
