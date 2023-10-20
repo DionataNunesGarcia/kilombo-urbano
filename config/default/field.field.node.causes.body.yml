@@ -1,18 +1,16 @@
-uuid: 74be0bd0-dd0a-4cc3-8065-7111fd171926
+uuid: 94fcc7f5-509a-46d3-a506-d079874e6825
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.article
+    - node.type.causes
   module:
     - text
-_core:
-  default_config_hash: IjZnOLWk1Pjq3WRg2pLSA1ERh7Po7izCq_p6UztZr2c
-id: node.article.body
+id: node.causes.body
 field_name: body
 entity_type: node
-bundle: article
+bundle: causes
 label: Body
 description: ''
 required: false
