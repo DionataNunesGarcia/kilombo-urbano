@@ -22,7 +22,6 @@
         "drupal/core-recommended": "^9.5",
         "drupal/pachu": "^1.0",
         "drupal/paragraphs": "^1.16",
-        "drupal/yg_charity": "^2.0",
         "drush/drush": "^11.6"
     },
     "conflict": {
