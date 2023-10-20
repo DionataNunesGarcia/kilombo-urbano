@@ -1,0 +1,41 @@
+
+{%
+  set classes = [
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }} style="margin: 25px;">
+  <div class="col-md-12 text-center">
+    <h4 class="title">
+      Fazer uma doação com PIX
+    </h4>
+  </div>
+  <div class="col-md-12">
+    <div class="well well-sm">
+      <div class="row">
+        <div class="col-sm-6 col-md-5 text-center">
+          <img src="{{ file_url(node.field_qr_code.entity.fileuri) }}" alt="" class="img-rounded img-responsive" />
+        </div>
+        <div class="col-sm-6 col-md-7">
+          <div>
+            {{ node.body.value | raw }}
+          </div>
+          <div class="input-group">
+            <input type="text" class="form-control" value="{{ content.field_pay_with_pix_copy_and_past['#items'].getString() }}">
+            <div class="input-group-append">
+              <button class="btn btn-success btn-sm copy-paste" type="button">
+                <i class="fa fa-copy"></i> Pix copia e cola
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

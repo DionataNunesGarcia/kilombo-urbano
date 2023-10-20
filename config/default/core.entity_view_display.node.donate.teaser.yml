@@ -1,0 +1,34 @@
+uuid: c56b2dae-e486-42f6-97f0-83da4045ab27
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.donate.body
+    - field.field.node.donate.field_pay_with_pix_copy_and_past
+    - field.field.node.donate.field_qr_code
+    - node.type.donate
+  module:
+    - text
+    - user
+id: node.donate.teaser
+targetEntityType: node
+bundle: donate
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_pay_with_pix_copy_and_past: true
+  field_qr_code: true

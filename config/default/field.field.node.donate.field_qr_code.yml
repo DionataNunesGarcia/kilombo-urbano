@@ -1,0 +1,38 @@
+uuid: d0b269b4-f1a7-40b6-a562-e71048642d69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_qr_code
+    - node.type.donate
+  module:
+    - image
+id: node.donate.field_qr_code
+field_name: field_qr_code
+entity_type: node
+bundle: donate
+label: 'QR Code'
+description: 'Upload here the PIX QR Code'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png jpg jpeg'
+  max_filesize: ''
+  max_resolution: 500x500
+  min_resolution: 21x20
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image
