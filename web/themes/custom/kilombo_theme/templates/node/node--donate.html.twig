@@ -19,17 +19,17 @@
   <div class="col-md-12">
     <div class="well well-sm">
       <div class="row">
-        <div class="col-sm-6 col-md-5 text-center">
+        <div class="col-sm-6 col-md-4 text-center">
           <img src="{{ file_url(node.field_qr_code.entity.fileuri) }}" alt="" class="img-rounded img-responsive" />
         </div>
-        <div class="col-sm-6 col-md-7">
+        <div class="col-sm-6 col-md-8">
           <div>
             {{ node.body.value | raw }}
           </div>
           <div class="input-group">
-            <input type="text" class="form-control" value="{{ content.field_pay_with_pix_copy_and_past['#items'].getString() }}">
+            <input type="text" disabled class="form-control value-copy" value="{{ content.field_pay_with_pix_copy_and_past['#items'].getString() }}">
             <div class="input-group-append">
-              <button class="btn btn-success btn-sm copy-paste" type="button">
+              <button class="btn btn-success btn-sm btn-copy" type="button">
                 <i class="fa fa-copy"></i> Pix copia e cola
               </button>
             </div>
