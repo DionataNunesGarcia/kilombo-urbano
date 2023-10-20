@@ -1,10 +1,59 @@
 <header id="masthead" class="site-header">
+  <div class="top_bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          {% if page.top_header %}
+            {{ page.top_header }}
+          {% else %}
+
+            <div class="left_top">
+              {% if twitter or facebook or instagram or pintrest %}
+                <ul>
+                  <li>
+                    <a href="#"><img src="{{ path_to_theme }}/images/share.png"> OUR SOCIAL</a>
+                  </li>
+                </ul>
+              {% endif %}
+              <ul>
+                {% if facebook %}
+                  <li><a href="{{ facebook }}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                {% endif %}
+                {% if instagram %}
+                  <li><a href="{{ instagram }}"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                {% endif %}
+                {% if twitter %}
+                  <li><a href="{{ twitter }}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                {% endif %}
+                {% if pintrest %}
+                  <li><a href="{{ pintrest }}"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                {% endif %}
+              </ul>
+            </div>
+          {% endif %}
+        </div>
+        <div class="col-md-6">
+          {% if page.top_header_r %}
+            {{ page.top_header_r }}
+          {% else %}
+
+            <div class="right_btn_donate">
+              <a href="{{ basepath }}/doacao/">
+                <i class="fa fa-dollar" aria-hidden="true"></i>
+                Doe Agora com PIX
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="main_header" style="background: #534e4a;">
     <div class="container">
       <div class="row">
         <div class="col-md-3">
           <div class="logo">
-            <a class="navbar-brand" href="{{ path('<front>') }}"><img src="{{ logopath }}" alt="logo"></a>
+            <a class="navbar-brand" href="{{ path('<front>') }}"><img src="{{ 'asasdsda' }}" alt="logo"></a>
           </div>
         </div>
         <div class="col-md-9">

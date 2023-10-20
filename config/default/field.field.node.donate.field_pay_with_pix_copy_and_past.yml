@@ -1,0 +1,19 @@
+uuid: affaaa3a-58d8-4606-b482-8742498a8465
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pay_with_pix_copy_and_past
+    - node.type.donate
+id: node.donate.field_pay_with_pix_copy_and_past
+field_name: field_pay_with_pix_copy_and_past
+entity_type: node
+bundle: donate
+label: 'Pay with PIX copy and paste'
+description: 'Paste here the "Copy and Paste" code.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

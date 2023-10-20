@@ -1,0 +1,23 @@
+uuid: 0da68d00-999c-4764-88ac-83e34f68d840
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.donate
+  module:
+    - text
+id: node.donate.body
+field_name: body
+entity_type: node
+bundle: donate
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
