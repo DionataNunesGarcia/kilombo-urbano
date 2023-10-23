@@ -1,0 +1,40 @@
+<!-- HEADER SECTION-->
+{% include "@kilombo_theme/menu/header.html.twig" %}
+<!-- END HEADER SECTION -->
+
+<div class="clearfix"></div>
+
+<section id="main-wrapper" class="pt-3 pb-3 clearfix">
+
+  {# {{ page.highlighted }} #}
+  <div id="main" class="row clearfix">
+    {% if page.sidebar %}
+      <div id="content" class="col-12 col-md-8 col-sm-12" role="main">
+        <a id="main-content" tabindex="-1"></a>
+        {{ page.bread_crumb }}
+        {{ page.highlighted }}
+        {{ page.content }}
+      </div>
+      <section id="sidebar" class="col-12 col-md-4 col-sm-12 ">
+        <div class="sidebar">
+          {{ page.sidebar }}
+        </div>
+      </section>
+    {% else %}
+      <div id="content" class="col-12 col-md-12 col-sm-12" role="main">
+        <a id="main-content" tabindex="-1"></a>
+        {{ page.bread_crumb }}
+        {{ page.highlighted }}
+        {{ page.content }}
+      </div>
+      <div class="clearfix"></div>
+
+    {% endif %}
+  </div>
+
+</section>
+
+<div class="clearfix"></div>
+<!-- FOOTER SECTION-->
+{% include "@pachu/system/footer.html.twig" %}
+<!-- END FOOTER SECTION -->

@@ -11,22 +11,46 @@
               {% if twitter or facebook or instagram or pintrest %}
                 <ul>
                   <li>
-                    <a href="#"><img src="{{ path_to_theme }}/images/share.png"> OUR SOCIAL</a>
+                    <a href="#">
+                      <img src="{{ path_to_theme }}/images/share.png"></a>
                   </li>
                 </ul>
               {% endif %}
               <ul>
                 {% if facebook %}
-                  <li><a href="{{ facebook }}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li>
+                    <a href="{{ facebook }}">
+                      <i class="fa fa-facebook" aria-hidden="true">
+                      </i>
+                    </a>
+                  </li>
                 {% endif %}
                 {% if instagram %}
-                  <li><a href="{{ instagram }}"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                  <li>
+                    <a href="{{ instagram }}">
+                      <i class="fa fa-instagram" aria-hidden="true">
+
+                      </i>
+                    </a>
+                  </li>
                 {% endif %}
                 {% if twitter %}
-                  <li><a href="{{ twitter }}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li>
+                    <a href="{{ twitter }}">
+                      <i class="fa fa-twitter" aria-hidden="true">
+
+                      </i>
+                    </a>
+                  </li>
                 {% endif %}
                 {% if pintrest %}
-                  <li><a href="{{ pintrest }}"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                  <li>
+                    <a href="{{ pintrest }}">
+                      <i class="fa fa-pinterest-p" aria-hidden="true">
+
+                      </i>
+                    </a>
+                  </li>
                 {% endif %}
               </ul>
             </div>
@@ -39,8 +63,10 @@
 
             <div class="right_btn_donate">
               <a href="{{ basepath }}/doacao/">
-                <i class="fa fa-dollar" aria-hidden="true"></i>
-                Doe Agora com PIX
+                <i class="fa fa-dollar" aria-hidden="true">
+
+                </i>
+                Doe Agora
               </a>
             </div>
           {% endif %}
@@ -53,14 +79,18 @@
       <div class="row">
         <div class="col-md-3">
           <div class="logo">
-            <a class="navbar-brand" href="{{ path('<front>') }}"><img src="{{ 'asasdsda' }}" alt="logo"></a>
+            <a class="navbar-brand" href="{{ path('<front>') }}">
+              <img src="{{ logopath }}" alt="logo">
+            </a>
           </div>
         </div>
         <div class="col-md-9">
           <div class="menu_main">
             <nav class="navbar navbar-expand-lg navbar-light">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon">
+
+                </span>
               </button>
               <div class="collapse navbar-collapse"  id="navbarText">
                 {{ page.header }}

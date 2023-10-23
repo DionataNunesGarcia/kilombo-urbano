@@ -1,0 +1,78 @@
+<div class="contact-form">
+  <div class="section-title text-center">
+    <h4 class="title">
+      Entre em Contato
+    </h4>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      {{ contact_form }}
+    </div>
+    <div class="col-md-6">
+      <div class="section-title">
+        <h2>Address</h2>
+      </div>
+      <div id="address">
+        <ul class="address">
+          <li><i class="fa fa-map-marker"></i> 1234, Lorem Ipsum Dolor Sit Amet </li>
+          <li><i class="fa fa-phone"></i>1234567890</li>
+          <li><i class="fa fa-envelope-o"></i>info@domain.com</li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <div class="section-title">
+          <h2>Social Links</h2>
+        </div>
+        <ul class="footer-social-links">
+          {% if facebook %}
+            <li>
+              <a href="{{ facebook }}">
+                <i class="fa fa-facebook" aria-hidden="true">
+                </i>
+              </a>
+            </li>
+          {% endif %}
+          {% if instagram %}
+            <li>
+              <a href="{{ instagram }}">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% if twitter %}
+            <li>
+              <a href="{{ twitter }}">
+                <i class="fa fa-twitter" aria-hidden="true">
+
+                </i>
+              </a>
+            </li>
+          {% endif %}
+          {% if pintrest %}
+            <li>
+              <a href="{{ pintrest }}">
+                <i class="fa fa-pinterest-p" aria-hidden="true">
+
+                </i>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div id="map-section">
+  <div class="section-title text-center">
+    <h4 class="title">
+      Nossa Localização
+    </h4>
+  </div>
+  <iframe
+    width="{{ maps_width }}"
+    height="{{ maps_height }}"
+    style="border:0"
+    src="{{ maps_url }}">
+  </iframe>
+</div>

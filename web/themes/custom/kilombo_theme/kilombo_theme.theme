@@ -5,6 +5,9 @@
  * Functions to support theming in the Kilombo theme.
  */
 
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeInterface;
+
 /**
  * Implements hook_preprocess_HOOK() for html.html.twig.
  */
@@ -23,5 +26,84 @@ function kilombo_theme_preprocess_page(&$variables) {
  * Implements hook_preprocess_HOOK() for node.html.twig.
  */
 function kilombo_theme_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  if ($node instanceof NodeInterface) {
+    $type = $node->getType();
 
+    // Contact Page
+    if ($type == 'contact') {
+      $fieldMap = $node->get('field_map') ? $node->get('field_map')->getValue() : NULL;
+      $variables['maps_url'] = buildUrlMaps($fieldMap);
+      $variables['maps_width'] = $fieldMap[0]['width'];
+      $variables['maps_height'] = $fieldMap[0]['height'];
+      $contact_form = $node->get('field_contact_form') ? $node->get('field_contact_form')->getValue() : NULL;
+      $message = \Drupal::entityTypeManager()
+        ->getStorage('contact_message')
+        ->create([
+          'contact_form' => $contact_form[0]['target_id'],
+        ]);
+      $variables['contact_form'] = \Drupal::service('entity.form_builder')->getForm($message);
+    }
+  }
+}
+
+
+/**
+ * Implements preprocess_block().
+ */
+function kilombo_theme_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
+  $form['name'] = [
+    '#type' => 'textfield',
+    '#attributes' => [
+      'placeholder' => t('Your Name*'),
+    ],
+  ];
+  $form['mail'] = [
+    '#type' => 'textfield',
+    '#attributes' => [
+      'placeholder' => t('Your E-mail*'),
+    ],
+  ];
+  $form['field_phone'] = [
+    '#type' => 'textfield',
+    '#attributes' => [
+      'placeholder' => t('Your Phone*'),
+    ],
+  ];
+  $form['subject'] = [
+    '#type' => 'textfield',
+    '#attributes' => [
+      'placeholder' => t('Your Subject*'),
+    ],
+  ];
+  $form['copy'] = [
+    '#type' => 'hide',
+    '#attributes' => [
+      'placeholder' => t('Your Subject*'),
+    ],
+  ];
+  $form['message'] = [
+    '#type' => 'textarea',
+    '#attributes' => [
+      'placeholder' => t('Your Message*'),
+    ],
+  ];
+  $form['actions']['preview'] = ["#type" => "hide"];
+}
+/**
+ * @param $node
+ *
+ * @return string
+ */
+function buildUrlMaps($fieldMap = NULL) {
+  if (!$fieldMap) {
+    return "";
+  }
+  $urMaps = "https://www.google.com/maps/embed/v1/place";
+  $key = \Drupal::service('config.factory')
+    ->getEditable('google_map_field.settings')
+    ->get('google_map_field_apikey');
+  $latLon = "q={$fieldMap[0]['lat']},{$fieldMap[0]['lon']}";
+  $zoom = "zoom={$fieldMap[0]['zoom']}";
+  return "{$urMaps}?key={$key}&{$latLon}&$zoom";
 }
