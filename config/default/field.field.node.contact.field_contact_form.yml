@@ -1,0 +1,26 @@
+uuid: 07a7a351-3098-403d-a16b-4a9bcfb6abf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contact
+    - field.storage.node.field_contact_form
+    - node.type.contact
+id: node.contact.field_contact_form
+field_name: field_contact_form
+entity_type: node
+bundle: contact
+label: 'Contact Form'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 68573a02-5fc7-478b-8a25-d2642273e5d3
+default_value_callback: ''
+settings:
+  handler: 'default:contact_form'
+  handler_settings:
+    target_bundles: null
+    auto_create: true
+field_type: entity_reference

@@ -1,4 +1,4 @@
-uuid: f1c88f9e-04e4-432d-81ae-1f4cd36cfa61
+uuid: dfb82c5f-5a5e-4bc1-8e18-465d010fb4bf
 langcode: en
 status: true
 dependencies:
@@ -9,9 +9,9 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: Donate
-type: donate
-description: 'Use for register PIX data.'
+name: Contact
+type: contact
+description: 'Contact Page'
 help: ''
 new_revision: true
 preview_mode: 1

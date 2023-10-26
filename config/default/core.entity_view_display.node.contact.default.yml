@@ -1,0 +1,50 @@
+uuid: f56db7ae-36e2-43dc-911b-41f94610eb2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.contact.body
+    - field.field.node.contact.field_contact_form
+    - field.field.node.contact.field_map
+    - node.type.contact
+  module:
+    - entity_class_formatter
+    - google_map_field
+    - text
+    - user
+id: node.contact.default
+targetEntityType: node
+bundle: contact
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_contact_form:
+    type: entity_class_formatter
+    label: above
+    settings:
+      prefix: ''
+      suffix: ''
+      attr: ''
+      field: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_map:
+    type: google_map_field_embed
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

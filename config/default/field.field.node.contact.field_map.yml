@@ -1,0 +1,36 @@
+uuid: 13f7a534-dae2-4368-9fd3-c635b794b903
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_map
+    - node.type.contact
+  module:
+    - google_map_field
+id: node.contact.field_map
+field_name: field_map
+entity_type: node
+bundle: contact
+label: Map
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    preview: ''
+    actions: {  }
+    lat: '-31.779872315259617'
+    name: 'Ocupação Canto de Conexão'
+    lon: '-52.339344887877814'
+    zoom: ''
+    type: roadmap
+    width: 100%
+    height: 450px
+    marker: '1'
+    traffic: '0'
+    marker_icon: ''
+    controls: '1'
+    infowindow: 'R. Benjamin Constant, 1327 - Centro, Pelotas - RS, 96010-020'
+default_value_callback: ''
+settings: {  }
+field_type: google_map_field

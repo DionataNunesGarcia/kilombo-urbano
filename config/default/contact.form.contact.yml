@@ -1,0 +1,13 @@
+uuid: 68573a02-5fc7-478b-8a25-d2642273e5d3
+langcode: en
+status: true
+dependencies: {  }
+id: contact
+label: Contact
+recipients:
+  - dionata.nunes.garcia@gmail.com
+  - dyonathan99@hotmail.com
+reply: ''
+weight: 0
+message: Test
+redirect: /contato
