@@ -1,0 +1,23 @@
+diff --git a/web/modules/contrib/br_address_field/src/Plugin/Field/FieldFormatter/BrAddressPlainFormatter.php b/web/modules/contrib/br_address_field/src/Plugin/Field/FieldFormatter/BrAddressPlainFormatter.php
+index aed824b..b870a69 100644
+--- a/web/modules/contrib/br_address_field/src/Plugin/Field/FieldFormatter/BrAddressPlainFormatter.php
++++ b/web/modules/contrib/br_address_field/src/Plugin/Field/FieldFormatter/BrAddressPlainFormatter.php
+@@ -60,7 +60,7 @@ class BrAddressPlainFormatter extends FormatterBase {
+             1 => $this->t('Initials'),
+         ];
+ 
+-        $summary[] = $this->t('How to show state field: @style', ['@style' => $display_state_options[$this->getSetting('display_state')]]);
++        $summary[] = $this->t('How to show state field: @style', ['@style' => $display_state_options[$this->getSetting('display_state') ?? '']]);
+         return $summary;
+     }
+ 
+@@ -111,6 +111,9 @@ class BrAddressPlainFormatter extends FormatterBase {
+                 case 1:
+                     $state = $values['state'];
+                     break;
++
++                default:
++                    $state = "RS";
+             }
+ 
+             $elements[$delta] = [
