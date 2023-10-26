@@ -52,43 +52,45 @@ function kilombo_theme_preprocess_node(&$variables) {
  * Implements preprocess_block().
  */
 function kilombo_theme_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
-  $form['name'] = [
-    '#type' => 'textfield',
-    '#attributes' => [
-      'placeholder' => t('Your Name*'),
-    ],
-  ];
-  $form['mail'] = [
-    '#type' => 'textfield',
-    '#attributes' => [
-      'placeholder' => t('Your E-mail*'),
-    ],
-  ];
-  $form['field_phone'] = [
-    '#type' => 'textfield',
-    '#attributes' => [
-      'placeholder' => t('Your Phone*'),
-    ],
-  ];
-  $form['subject'] = [
-    '#type' => 'textfield',
-    '#attributes' => [
-      'placeholder' => t('Your Subject*'),
-    ],
-  ];
-  $form['copy'] = [
-    '#type' => 'hide',
-    '#attributes' => [
-      'placeholder' => t('Your Subject*'),
-    ],
-  ];
-  $form['message'] = [
-    '#type' => 'textarea',
-    '#attributes' => [
-      'placeholder' => t('Your Message*'),
-    ],
-  ];
-  $form['actions']['preview'] = ["#type" => "hide"];
+  if ($form_id == 'contact_message_contact_form') {
+    $form['name'] = [
+      '#type' => 'textfield',
+      '#attributes' => [
+        'placeholder' => t('Your Name*'),
+      ],
+    ];
+    $form['mail'] = [
+      '#type' => 'textfield',
+      '#attributes' => [
+        'placeholder' => t('Your E-mail*'),
+      ],
+    ];
+    $form['field_phone'] = [
+      '#type' => 'textfield',
+      '#attributes' => [
+        'placeholder' => t('Your Phone*'),
+      ],
+    ];
+    $form['subject'] = [
+      '#type' => 'textfield',
+      '#attributes' => [
+        'placeholder' => t('Your Subject*'),
+      ],
+    ];
+    $form['copy'] = [
+      '#type' => 'hide',
+      '#attributes' => [
+        'placeholder' => t('Your Subject*'),
+      ],
+    ];
+    $form['message'] = [
+      '#type' => 'textarea',
+      '#attributes' => [
+        'placeholder' => t('Your Message*'),
+      ],
+    ];
+    $form['actions']['preview'] = ["#type" => "hide"];
+  }
 }
 /**
  * @param $node
