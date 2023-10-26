@@ -1,0 +1,23 @@
+uuid: 12345b3a-f8c5-4132-b987-a542efc66fa6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ticket_price
+    - node.type.events
+id: node.events.field_ticket_price
+field_name: field_ticket_price
+entity_type: node
+bundle: events
+label: 'Ticket price'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

@@ -1,0 +1,36 @@
+uuid: 36a1e2cd-4cec-460e-8a74-ff630b2e2017
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_map
+    - node.type.events
+  module:
+    - google_map_field
+id: node.events.field_map
+field_name: field_map
+entity_type: node
+bundle: events
+label: Map
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    preview: ''
+    actions: {  }
+    lat: '-31.7799989'
+    name: 'Ocupação Canto de Conexão'
+    lon: '-52.3392766'
+    zoom: '16'
+    type: roadmap
+    width: 100%
+    height: 450px
+    marker: '1'
+    traffic: '0'
+    marker_icon: ''
+    controls: '1'
+    infowindow: ''
+default_value_callback: ''
+settings: {  }
+field_type: google_map_field
