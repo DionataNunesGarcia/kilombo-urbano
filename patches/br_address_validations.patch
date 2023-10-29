@@ -1,7 +1,7 @@
-diff --git a/web/modules/contrib/br_address_field/src/Plugin/Field/FieldFormatter/BrAddressPlainFormatter.php b/web/modules/contrib/br_address_field/src/Plugin/Field/FieldFormatter/BrAddressPlainFormatter.php
+diff --git a/modules/contrib/br_address_field/src/Plugin/Field/FieldFormatter/BrAddressPlainFormatter.php b/modules/contrib/br_address_field/src/Plugin/Field/FieldFormatter/BrAddressPlainFormatter.php
 index aed824b..303b2d8 100644
---- a/web/modules/contrib/br_address_field/src/Plugin/Field/FieldFormatter/BrAddressPlainFormatter.php
-+++ b/web/modules/contrib/br_address_field/src/Plugin/Field/FieldFormatter/BrAddressPlainFormatter.php
+--- a/modules/contrib/br_address_field/src/Plugin/Field/FieldFormatter/BrAddressPlainFormatter.php
++++ b/modules/contrib/br_address_field/src/Plugin/Field/FieldFormatter/BrAddressPlainFormatter.php
 @@ -60,7 +60,7 @@ class BrAddressPlainFormatter extends FormatterBase {
              1 => $this->t('Initials'),
          ];
