@@ -32,8 +32,10 @@ $settings['trusted_host_patterns'] = ['.*'];
 $settings['class_loader_auto_detect'] = FALSE;
 
 // Set $settings['config_sync_directory'] if not set in settings.php.
+$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
 if (empty($settings['config_sync_directory'])) {
-  $settings['config_sync_directory'] = 'sites/default/files/sync';
+  $dir = dirname(DRUPAL_ROOT);
+  $settings['config_sync_directory'] = "{$dir}/config/default";
 }
 
 // Override drupal/symfony_mailer default config to use Mailpit
