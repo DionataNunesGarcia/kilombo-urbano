@@ -26,6 +26,7 @@
         "drupal/google_map_field": "^2.0",
         "drupal/pachu": "^1.0",
         "drupal/paragraphs": "^1.16",
+        "drupal/token": "^1.13",
         "drush/drush": "^11.6"
     },
     "conflict": {
