@@ -1,0 +1,133 @@
+<footer id="colophon" class="footer_section">
+  <section id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <div class="footer-about-us">
+            <h2 class="footer-wid-title">
+              {{ 'Sobre nós' | t }}
+            </h2>
+            <p>
+              O Kilombo Urbano Ocupação Canto de Conexão é um importante movimento de luta por moradia estudantil e popular na cidade de Pelotas, no estado do Rio Grande do Sul, Brasil. Essa ocupação representa um exemplo inspirador de mobilização comunitária e resistência em busca do direito à habitação digna em um contexto de crescente desigualdade e exclusão social.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+          <div class="footer-menu">
+            <h2 class="footer-wid-title">
+              Páginas
+            </h2>
+
+              {% if page.footer %}
+                <div class="container">
+                  {{ page.footer }}
+                </div>
+              {% endif %}
+{#              <li><i class="fa fa-angle-right"></i><a href="index.html">Home</a></li>#}
+{#              <li><i class="fa fa-angle-right"></i><a href="about.html" "="">About Us</a></li>#}
+{#              <li><i class="fa fa-angle-right"></i><a href="causes.html">Causes</a></li>#}
+{#              <li><i class="fa fa-angle-right"></i><a href="events.html">Events</a></li>#}
+{#              <li><i class="fa fa-angle-right"></i><a href="blog.html">Blog</a></li>#}
+{#              <li><i class="fa fa-angle-right"></i><a href="contact.html">Contact Us</a></li>#}
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="footer-gallery">
+            <h2 class="footer-wid-title">
+              Instagram
+            </h2>
+            <ul class="footer-gallery-list">
+              <li><img src="https://demo.drupalfreethemes.com/drupal/free-themes-html/yg-charity/images/testimonial/kid_2.gif" class="img-responsive" alt="Team Member"></li>
+              <li><img src="https://demo.drupalfreethemes.com/drupal/free-themes-html/yg-charity/images/testimonial/kid_2.gif" class="img-responsive" alt="Team Member"></li>
+              <li><img src="https://demo.drupalfreethemes.com/drupal/free-themes-html/yg-charity/images/testimonial/kid_2.gif" class="img-responsive" alt="Team Member"></li>
+              <li><img src="https://demo.drupalfreethemes.com/drupal/free-themes-html/yg-charity/images/testimonial/kid_2.gif" class="img-responsive" alt="Team Member"></li>
+              <li><img src="https://demo.drupalfreethemes.com/drupal/free-themes-html/yg-charity/images/testimonial/kid_2.gif" class="img-responsive" alt="Team Member"></li>
+              <li><img src="https://demo.drupalfreethemes.com/drupal/free-themes-html/yg-charity/images/testimonial/kid_2.gif" class="img-responsive" alt="Team Member"></li>
+              <li><img src="https://demo.drupalfreethemes.com/drupal/free-themes-html/yg-charity/images/testimonial/kid_2.gif" class="img-responsive" alt="Team Member"></li>
+              <li><img src="https://demo.drupalfreethemes.com/drupal/free-themes-html/yg-charity/images/testimonial/kid_2.gif" class="img-responsive" alt="Team Member"></li>
+              <li><img src="https://demo.drupalfreethemes.com/drupal/free-themes-html/yg-charity/images/testimonial/kid_2.gif" class="img-responsive" alt="Team Member"></li>
+              <li><img src="https://demo.drupalfreethemes.com/drupal/free-themes-html/yg-charity/images/testimonial/kid_2.gif" class="img-responsive" alt="Team Member"></li>
+              <li><img src="https://demo.drupalfreethemes.com/drupal/free-themes-html/yg-charity/images/testimonial/kid_2.gif" class="img-responsive" alt="Team Member"></li>
+              <li><img src="https://demo.drupalfreethemes.com/drupal/free-themes-html/yg-charity/images/testimonial/kid_2.gif" class="img-responsive" alt="Team Member"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+          <div class="footer-social">
+            <h2 class="footer-wid-title">Social Links</h2>
+            <ul class="footer-social-links">
+              {% if twitter or facebook or instagram or pintrest %}
+                  {% if facebook %}
+                    <li><a href="{{ facebook }}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  {% endif %}
+                  {% if instagram %}
+                    <li><a href="{{ instagram }}"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                  {% endif %}
+                  {% if twitter %}
+                    <li><a href="{{ twitter }}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  {% endif %}
+                  {% if pintrest %}
+                    <li><a href="{{ pintrest }}"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                  {% endif %}
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="footer_par">
+        {% if page.footer_first %}
+          {{ page. footer_first }}
+        {% else %}
+
+          Copyright @ {{ "now"|date("Y") }} Todos os direitos reservados
+
+        {% endif %}
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        {% if page.footer_second %}
+          {{ page. footer_second }}
+        {% else %}
+        <div class="footer-logo">
+          <div class="logo">
+              <a href="{{ path('<front>') }}">
+                <img src="{{ logopath }}">
+              </a>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="col-md-4">
+        {% if page.footer_third %}
+          {{ page. footer_third }}
+        {% else %}
+        <div class="footer_social_icon">
+            {% if twitter or facebook or instagram or pintrest %}
+              <ul>
+              {% if facebook %}
+                <li><a href="{{ facebook }}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            {% endif %}
+              {% if instagram %}
+                    <li><a href="{{ instagram }}"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            {% endif %}
+              {% if twitter %}
+                  <li><a href="{{ twitter }}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            {% endif %}
+              {% if pintrest %}
+                    <li><a href="{{ pintrest }}"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+            {% endif %}
+              </ul>
+           {% endif %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</footer>

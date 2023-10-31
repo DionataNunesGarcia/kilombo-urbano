@@ -12,7 +12,17 @@ use Drupal\node\NodeInterface;
  * Implements hook_preprocess_HOOK() for html.html.twig.
  */
 function kilombo_theme_preprocess_html(&$variables) {
+}
 
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function kilombo_theme_preprocess_block__footer(&$variables) {
+  $entityAbout = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties(['type' => 'about']);
+  foreach ($entityAbout as $item) {
+    $variables['about_us']['summary'] = $item->get('field_summary');
+    $variables['about_us']['field_address'] = $item->get('field_address');
+  }
 }
 
 /**
