@@ -1,0 +1,21 @@
+uuid: 59cafd6a-b738-4dae-ae36-0822efe10110
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address
+    - node.type.about
+  module:
+    - br_address_field
+id: node.about.field_address
+field_name: field_address
+entity_type: node
+bundle: about
+label: Address
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: br_address_field_type

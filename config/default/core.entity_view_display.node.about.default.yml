@@ -1,0 +1,59 @@
+uuid: 429f9260-1cb5-4b62-b775-e6ead5b44c74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.about.body
+    - field.field.node.about.field_address
+    - field.field.node.about.field_image
+    - field.field.node.about.field_summary
+    - node.type.about
+  module:
+    - br_address_field
+    - image
+    - text
+    - user
+id: node.about.default
+targetEntityType: node
+bundle: about
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_address:
+    type: br_address_plain_formatter
+    label: above
+    settings:
+      display_state: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_summary:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
