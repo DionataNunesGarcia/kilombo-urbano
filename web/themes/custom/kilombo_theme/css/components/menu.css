@@ -1,3 +1,9 @@
 nav ul.navbar-nav li a {
     color: #fff !important;
 }
+.logo img {
+  max-height: 65px;
+}
+.main_header {
+  background: #000;
+}

@@ -1,4 +1,5 @@
-{# Menu. #}
-{% block content %}
-  {{ content }}
-{% endblock %}
+<div{{ attributes.addClass(classes) }}>
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div>
