@@ -1,23 +1,23 @@
-uuid: 3c704530-a154-4f4c-8822-de2ee2c760d9
+uuid: 4e270e9d-3f9c-4805-8a78-cc451022d373
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
+    - field.storage.node.field_become_volunteer
     - node.type.about
   module:
     - text
-id: node.about.body
-field_name: body
+id: node.about.field_become_volunteer
+field_name: field_become_volunteer
 entity_type: node
 bundle: about
-label: 'Who we are'
+label: 'Become a Volunteer'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  display_summary: true
+  display_summary: false
   required_summary: false
 field_type: text_with_summary

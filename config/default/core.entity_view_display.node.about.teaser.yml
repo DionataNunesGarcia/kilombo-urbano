@@ -6,8 +6,11 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.about.body
     - field.field.node.about.field_address
+    - field.field.node.about.field_become_volunteer
     - field.field.node.about.field_image
     - field.field.node.about.field_summary
+    - field.field.node.about.field_what_we_do
+    - field.field.node.about.field_what_we_do_image
     - node.type.about
   module:
     - text
@@ -32,5 +35,8 @@ content:
     region: content
 hidden:
   field_address: true
+  field_become_volunteer: true
   field_image: true
   field_summary: true
+  field_what_we_do: true
+  field_what_we_do_image: true

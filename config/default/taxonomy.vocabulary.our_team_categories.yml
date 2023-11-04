@@ -1,0 +1,8 @@
+uuid: 9c677f57-bf3d-4734-bb95-c96479044118
+langcode: en
+status: true
+dependencies: {  }
+name: 'Our Team Categories'
+vid: our_team_categories
+description: 'Use for create Our Team Categories.'
+weight: 0

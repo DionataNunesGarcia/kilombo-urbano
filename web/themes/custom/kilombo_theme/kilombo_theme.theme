@@ -8,6 +8,7 @@
 use Drupal\Core\Extension\ExtensionPathResolver;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\node\NodeInterface;
+use Drupal\taxonomy\Entity\Term;
 
 /**
  * Implements hook_preprocess_HOOK() for html.html.twig.
@@ -19,7 +20,9 @@ function kilombo_theme_preprocess_html(&$variables) {
  * Implements hook_preprocess_HOOK() for html.html.twig.
  */
 function kilombo_theme_preprocess_block__footer(&$variables) {
-  $entityAbout = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties(['type' => 'about']);
+  $entityAbout = \Drupal::entityTypeManager()
+    ->getStorage('node')
+    ->loadByProperties(['type' => 'about']);
   foreach ($entityAbout as $item) {
     $variables['about_us']['summary'] = $item->get('field_summary');
     $variables['about_us']['field_address'] = $item->get('field_address');
@@ -34,6 +37,7 @@ function kilombo_theme_preprocess_page(&$variables) {
     \Drupal::service('extension.path.resolver')->getPath('theme', 'kilombo_theme') :
     drupal_get_path('theme', 'kilombo_theme');
   $variables['path_to_theme'] = $GLOBALS['base_url'] . '/' . $pt;
+  $variables['path_image'] = $GLOBALS['base_url'] . '/' . $pt . '/images/';
   $variables['basepath'] = $GLOBALS['base_url'];
   $variables['logopath'] = theme_get_setting('logo.url') ?? $GLOBALS['base_url'] . '/' . $pt . '/images/logo.png';
   $variables['drupal_developers'] = theme_get_setting('drupal_developers');
@@ -65,6 +69,9 @@ function kilombo_theme_preprocess_node(&$variables) {
           'contact_form' => $contact_form[0]['target_id'],
         ]);
       $variables['contact_form'] = \Drupal::service('entity.form_builder')->getForm($message);
+    }
+    if ($type == 'about') {
+     $variables['our_team'] = getOurTeam();
     }
   }
 }
@@ -130,4 +137,19 @@ function buildUrlMaps($fieldMap = NULL) {
   $latLon = "q={$fieldMap[0]['lat']},{$fieldMap[0]['lon']}";
   $zoom = "zoom={$fieldMap[0]['zoom']}";
   return "{$urMaps}?key={$key}&{$latLon}&$zoom";
+}
+
+function getOurTeam() {
+  $entities = \Drupal::entityTypeManager()
+    ->getStorage('node')
+    ->loadByProperties(['type' => 'our_team']);
+  $ourTeam = [];
+  foreach ($entities as $item) {
+    $termCategory = Term::load($item->get('field_category')->target_id);
+    $ourTeam[$item->id()]['title'] = $item->get('title')->value;
+    $ourTeam[$item->id()]['avatar'] =$item->get('field_avatar')->entity->getFileUri();
+    $ourTeam[$item->id()]['category'] = $termCategory->getName();
+    $ourTeam[$item->id()]['body'] = $item->get('body')->value;
+  }
+  return $ourTeam;
 }

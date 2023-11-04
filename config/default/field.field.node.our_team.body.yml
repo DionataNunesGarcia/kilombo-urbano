@@ -1,17 +1,17 @@
-uuid: 3c704530-a154-4f4c-8822-de2ee2c760d9
+uuid: c7ececda-d1a6-4372-ae81-aea1880beb84
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.about
+    - node.type.our_team
   module:
     - text
-id: node.about.body
+id: node.our_team.body
 field_name: body
 entity_type: node
-bundle: about
-label: 'Who we are'
+bundle: our_team
+label: Body
 description: ''
 required: false
 translatable: true

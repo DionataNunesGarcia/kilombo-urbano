@@ -1,0 +1,47 @@
+<section id="about-1">
+  <div class="container">
+    <div class="row">
+      {% include '@kilombo_theme/elements/section.title.html.twig' with {title: 'QUEM NÓS SOMOS'} %}
+      <div class="col-md-6">
+        <div id="about-img">
+          <img src="{{ file_url(node.field_image.entity.fileuri) }}" alt="" class="img-responsive"/>
+        </div>
+      </div>
+      <div class="col-md-6">
+        {{ node.body.value | raw }}
+      </div>
+    </div>
+  </div>
+</section>
+<section id="what-we-do">
+  <div class="container">
+    <div class="row">
+      {% include '@kilombo_theme/elements/section.title.html.twig' with {title: 'O QUE FAZEMOS'} %}
+      <div class="col-md-6">
+        {{ node.field_what_we_do.value | raw }}
+      </div>
+      <div class="col-md-6">
+        <div id="about-img">
+          <img src="{{ file_url(node.field_what_we_do_image.entity.fileuri) }}" alt="" class="img-responsive" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about-team" class="text-center">
+  {% include '@kilombo_theme/elements/list.our.team.html.twig' with {our_team: our_team} %}
+</section>
+<section id="volunteer-section" class="text-center">
+  <div class="row">
+    {% include '@kilombo_theme/elements/section.title.html.twig' with {title: 'TORNE-SE UM VOLUNTÁRIO'} %}
+    <div class="col-md-12">
+      <p>
+        {{ node.field_become_volunteer.value | raw }}
+      </p>
+      <a href="#" class="btn btn-success">
+        Junte-se a Nós
+      </a>
+    </div>
+  </div>
+</section>

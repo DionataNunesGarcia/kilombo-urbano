@@ -1,0 +1,34 @@
+uuid: 7fdba953-bf30-4021-95cc-416400593790
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.our_team.body
+    - field.field.node.our_team.field_avatar
+    - field.field.node.our_team.field_category
+    - node.type.our_team
+  module:
+    - text
+    - user
+id: node.our_team.teaser
+targetEntityType: node
+bundle: our_team
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_avatar: true
+  field_category: true

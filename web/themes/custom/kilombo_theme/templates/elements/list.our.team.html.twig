@@ -1,0 +1,20 @@
+{% include '@kilombo_theme/elements/section.title.html.twig' with {title: 'Nosso Time'} %}
+<div class="row">
+  {% for item in our_team %}
+    <div class="col-md-4 col-sm-6 about-team">
+      <div class="about-team-member">
+        <div class="about-team-img">
+          <img src="{{ file_url(item.avatar) }}" alt="{{ item.title }}">
+        </div>
+        <div class="about-caption">
+          <h4>
+            {{ item.category }}
+          </h4>
+          <p>
+            {{ item.body | raw }}
+          </p>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
