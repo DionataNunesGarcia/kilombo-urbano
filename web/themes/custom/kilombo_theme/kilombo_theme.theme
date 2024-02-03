@@ -153,3 +153,31 @@ function getOurTeam() {
   }
   return $ourTeam;
 }
+
+/**
+ * Implements template_preprocess_HOOK() for views_view_table.
+ *
+ * @todo Revisit after https://www.drupal.org/node/3025726 or
+ * https://www.drupal.org/node/1973418 is in.
+ */
+function kilombo_theme_preprocess_views_view_table(&$variables) {
+  if (!empty($variables['header'])) {
+    foreach ($variables['header'] as &$header_cell) {
+      if (!empty($header_cell['url'])) {
+        $parsed_url = UrlHelper::parse($header_cell['url']);
+        $query = !empty($parsed_url['query']) ? $parsed_url['query'] : [];
+
+        if (isset($query['order']) && isset($query['sort'])) {
+          $header_cell['attributes']->addClass('sortable-heading');
+        }
+      }
+    }
+  }
+  /** @var \Drupal\views\ViewExecutable $view */
+  if ($view = $variables['view']) {
+    if ($view->id() == 'events') {
+      dump(t($view->getTitle()));
+//      dd($view->getTitle());
+    }
+  }
+}

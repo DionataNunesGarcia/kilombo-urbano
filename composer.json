@@ -24,6 +24,7 @@
         "drupal/core-recommended": "^9.5",
         "drupal/entity_class_formatter": "^2.0",
         "drupal/google_map_field": "^2.0",
+        "drupal/mask": "^2.0@alpha",
         "drupal/pachu": "^1.0",
         "drupal/paragraphs": "^1.16",
         "drupal/token": "^1.13",
