@@ -5,6 +5,7 @@
  * Functions to support theming in the Kilombo theme.
  */
 
+use Drupal\Component\Utility\UrlHelper;
 use Drupal\Core\Extension\ExtensionPathResolver;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\node\NodeInterface;
@@ -176,8 +177,7 @@ function kilombo_theme_preprocess_views_view_table(&$variables) {
   /** @var \Drupal\views\ViewExecutable $view */
   if ($view = $variables['view']) {
     if ($view->id() == 'events') {
-      dump(t($view->getTitle()));
-//      dd($view->getTitle());
+//      dump($view->id());
     }
   }
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8062658fee59292dcaf7823d1c7ebd8b",
+    "content-hash": "75ebc2ad0c752391c6f218fe05fd4d6b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1721,6 +1721,51 @@
                 "source": "https://github.com/drupal/core-recommended/tree/9.5.11"
             },
             "time": "2023-09-19T17:58:28+00:00"
+        },
+        {
+            "name": "drupal/date_filter",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/date_filter.git",
+                "reference": "1.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/date_filter-1.0.1.zip",
+                "reference": "1.0.1",
+                "shasum": "1878e7c0c204e36a0ec71b29fc8e21e7c23eb797"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.1",
+                    "datestamp": "1684831594",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Marcin Grabias",
+                    "homepage": "https://www.drupal.org/u/graber"
+                }
+            ],
+            "description": "Plug and play module replacing core date filters",
+            "homepage": "http://drupal.org/project/date_filter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/date_filter",
+                "issues": "https://drupal.org/project/issues/date_filter"
+            }
         },
         {
             "name": "drupal/entity_class_formatter",
